@@ -5,9 +5,9 @@ body {
 #HomePic
 {
     display: block;
-    margin-left: 50%;
-    margin-right: 50%;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .wrapper {
