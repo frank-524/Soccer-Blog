@@ -2,6 +2,14 @@ body {
     background-color: #946349;
 }
 
+#HomePic
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .wrapper {
     width: 100%;
 }
