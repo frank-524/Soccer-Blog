@@ -15,7 +15,7 @@ function updateList(){
     document.getElementById("thirdTeam").innerHTML = z;
 }
 function resetList(){
-    let x = "<li>Fc Barcelona</li>";
+    let x = "<li>FC Barcelona</li>";
     let y = "<li>Manchester United</li>";
     let z = "<li>Cruz Azul</li>";
     document.getElementById("firstTeam").innerHTML = x;
