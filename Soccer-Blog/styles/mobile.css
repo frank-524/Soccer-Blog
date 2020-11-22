@@ -38,6 +38,11 @@ This program will make a website mobile friendly */
     width: 100%; /*This will make the wrapper class wrap the width to 100% */
 }
 
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
 /*This is for the tablet layout */ 
 /*The media statement tells the code only to run the code
 if the statement afterwards is true. */
