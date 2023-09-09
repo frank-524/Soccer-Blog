@@ -1,5 +1,5 @@
 body {
-    background-color: #946349;
+    background-color: #1212618f;
 }
 
 #HomePic
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #946348
+    background-color: #b8e05a
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -33,7 +33,7 @@ h2 {
 }
 
 .topnav {
-    background-color: palevioletred;
+    background-color: rgba(24, 190, 157, 0.795);
     font-size: 2em;
 }
 
