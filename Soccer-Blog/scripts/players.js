@@ -378,14 +378,14 @@ function getAuba(){
 
 // Note to self. I might use JS object constructors to save time and less code
 function getPlayer(){
-    /*
-    I need to find a way to manipulate the endpoint url with the input from the html form
-    var height = parseInt(document.querySelector("#height").value); // parseInt converts string to a integer. .value porperty gets value from input
-    var weight = parseInt(document.querySelector("#weight").value);
-    */
 
     console.log("Player")
-    fetch("https://v3.football.api-sports.io/players?search=Haaland&league=39&season=2022", {
+    var playerLastName = String(document.querySelector("#playerlastname").value);
+    var leagueInt = parseInt(document.querySelector("#playerleague").value);
+    var season = String(document.querySelector("#season").value);
+
+    var url = `https://v3.football.api-sports.io/players?search=${playerLastName}&league=${leagueInt}&season=${season}`;
+    fetch(url, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "v3.football.api-sports.io",
