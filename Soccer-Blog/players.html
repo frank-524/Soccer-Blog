@@ -46,16 +46,35 @@
                     <li id="son"><a href="#son" onclick="getSon()">Son</a></li>
                     <li id="vvd"><a href="#vvd" onclick="getVvd()">Van Dijk</a></li>
                     <li id="auba"><a href="#auba" onclick="getAuba()">Auba</a></li>
-
-                    
-
-
                 </ol>
             </aside>
             <div id="theplayers">
-
             </div>
-
+            <h1>Search a player</h1>
+            <h2>League and team numbers</h2>
+            <ul>
+                <li>League # 39 English Premier League. Team # 50 Manchester City</li>
+                <li>League # 140 La Liga. Team # 529 FC Barcelona</li>
+                <li>League # 61 Ligue 1. Team # 85 PSG</li>
+                <li>League # 78 Bundesliga. Team # 157 Bayern Munich</li>
+                <li>League # 253 MLS. Team # 9568 Inter Miami</li>
+            </ul>
+            <form id="playerForm">
+                <fieldset>
+                    <legend>Enter a player's information</legend>
+                    <label for="playerlastname">Last name:</label>
+                    <input type="text" name="playerlastname" id="playerlastname">
+                    <label for="playerleague">League number:</label>
+                    <input type="text" name="playerleague" id="playerleague">
+                    <label for="season">Season year (YYYY):</label>
+                    <input type="text" name="season" id="season">
+                    <br>
+                    <button type="button" onclick="getPlayer()">Search</button>
+                    <button type="button" onclick="formReset()" value="Reset">Reset form</button>
+                </fieldset>
+            </form>
+            <div id="playerFormResult">
+            </div>
             <h3><a href="#top">Back to top</a></h3>
 
         </main>

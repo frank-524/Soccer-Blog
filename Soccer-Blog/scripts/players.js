@@ -166,9 +166,9 @@ function getSalah(){
     document.getElementById("theplayers").appendChild(img);
 }
 
-function getHazard(){
-    var x = "<h1>Hazard</h1>" 
-    + " " + "<p>Hazard dribbles pass defenders with ease</p>"
+function getDembele(){
+    var x = "<h1>Dembele</h1>" 
+    + " " + "<p>Dembele dribbles pass defenders with ease</p>"
     + " " + "<p><strong>Overall: 90/100</strong></p>"
     + " " + "<strong>Rating:</strong>"
     + " " + "<ul>"
@@ -377,4 +377,41 @@ function getAuba(){
 }
 
 // Note to self. I might use JS object constructors to save time and less code
+function getPlayer(){
 
+    console.log("Player")
+    var playerLastName = String(document.querySelector("#playerlastname").value);
+    var leagueInt = parseInt(document.querySelector("#playerleague").value);
+    var season = String(document.querySelector("#season").value);
+
+    var url = `https://v3.football.api-sports.io/players?search=${playerLastName}&league=${leagueInt}&season=${season}`;
+    fetch(url, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "v3.football.api-sports.io",
+            "x-rapidapi-key": "639d2606164b0892827bc33442514bd7"
+        }
+    })
+    .then(response => response.json())
+    .then(response => {
+        console.log(JSON.stringify(response));
+        getPlayerResult(JSON.stringify(response))
+    })
+    .catch(err => {
+        console.log(err);
+    });
+    
+}
+
+function getPlayerResult(response) {
+
+    console.log(response)
+
+}
+
+function formReset() { 
+    console.log("Form reset")
+    document.getElementById("playerForm").reset(); // This resets the result of the form
+    let result = "empty"; // sets variable equal to a blank space
+    document.querySelector("#result").innerHTML = result; // This resets the form
+} 
