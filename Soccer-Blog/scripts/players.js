@@ -393,11 +393,20 @@ function getPlayer(){
         }
     })
     .then(response => response.json())
-    .then(response => console.log(JSON.stringify(response)))
+    .then(response => {
+        console.log(JSON.stringify(response));
+        getPlayerResult(JSON.stringify(response))
+    })
     .catch(err => {
         console.log(err);
     });
     
+}
+
+function getPlayerResult(response) {
+
+    console.log(response)
+
 }
 
 function formReset() { 
@@ -405,4 +414,4 @@ function formReset() {
     document.getElementById("playerForm").reset(); // This resets the result of the form
     let result = "empty"; // sets variable equal to a blank space
     document.querySelector("#result").innerHTML = result; // This resets the form
-}
+} 
