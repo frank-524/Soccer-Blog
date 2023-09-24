@@ -166,9 +166,9 @@ function getSalah(){
     document.getElementById("theplayers").appendChild(img);
 }
 
-function getHazard(){
-    var x = "<h1>Hazard</h1>" 
-    + " " + "<p>Hazard dribbles pass defenders with ease</p>"
+function getDembele(){
+    var x = "<h1>Dembele</h1>" 
+    + " " + "<p>Dembele dribbles pass defenders with ease</p>"
     + " " + "<p><strong>Overall: 90/100</strong></p>"
     + " " + "<strong>Rating:</strong>"
     + " " + "<ul>"
